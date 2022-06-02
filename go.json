@@ -36,5 +36,40 @@
 		  "        fmt.Println(strings.Repeat(\"=\", 10),path.Base(os.Args[0]),strings.Repeat(\"=\", 10))",
 		  "}"
 		]
+	  },
+	  "exec": {
+		"prefix": "exec",
+		"body": [
+		  "package main",
+		  "import (",
+		  		"        \"sync\"",
+				"        \"os\"",
+				"        \"fmt\"",
+				"        \"path\"",
+				"        \"strings\"",
+				"        \"os/exec\"",
+		  ")",
+		  "",
+		  "func main() {",
+		  "        fmt.Println(strings.Repeat(\"=\", 10),path.Base(os.Args[0]),strings.Repeat(\"=\", 10))",
+		  "        var wg sync.WaitGroup",
+		  "        wg.Add(1)",
+		  "        go func() {",
+		  "                defer wg.Done()",
+		  "                cmd := exec.Command(\"echo\",\"Dinesh\")",
+		  "                stdout, err := cmd.Output()",
+	  
+		  "                if err != nil {",
+		  "                         fmt.Println(err.Error())",
+		  "                return",
+		  "                }",
+		  // Print the output
+		  "                fmt.Printf(string(stdout))",
+		  "                $0",
+		  "        }()",
+		  "        wg.Wait()",
+		  "        fmt.Println(strings.Repeat(\"=\", 10),path.Base(os.Args[0]),strings.Repeat(\"=\", 10))",
+		  "}"
+		]
 	  }
 }
