@@ -25,7 +25,7 @@
 		  ")",
 		  "",
 		  "func main() {",
-		  "        fmt.Println(strings.Repeat(\"=\", 10),path.Base(os.Args[0]),strings.Repeat(\"=\", 10))",
+		  "        fmt.Println(strings.Repeat(\"=\", 10),\"start of \",path.Base(os.Args[0]),strings.Repeat(\"=\", 10))",
 		  "        var wg sync.WaitGroup",
 		  "        wg.Add(1)",
 		  "        go func() {",
@@ -33,7 +33,7 @@
 		  "                $0",
 		  "        }()",
 		  "        wg.Wait()",
-		  "        fmt.Println(strings.Repeat(\"=\", 10),path.Base(os.Args[0]),strings.Repeat(\"=\", 10))",
+		  "        fmt.Println(strings.Repeat(\"=\", 10),\"End of \",path.Base(os.Args[0]),strings.Repeat(\"=\", 10))",
 		  "}"
 		]
 	  },
@@ -51,7 +51,7 @@
 		  ")",
 		  "",
 		  "func main() {",
-		  "        fmt.Println(strings.Repeat(\"=\", 10),path.Base(os.Args[0]),strings.Repeat(\"=\", 10))",
+		  "        fmt.Println(strings.Repeat(\"=\", 10),\"start of \",path.Base(os.Args[0]),strings.Repeat(\"=\", 10))",
 		  "        var wg sync.WaitGroup",
 		  "        wg.Add(1)",
 		  "        go func() {",
@@ -68,7 +68,7 @@
 		  "                $0",
 		  "        }()",
 		  "        wg.Wait()",
-		  "        fmt.Println(strings.Repeat(\"=\", 10),path.Base(os.Args[0]),strings.Repeat(\"=\", 10))",
+		  "        fmt.Println(strings.Repeat(\"=\", 10),\"End of \",path.Base(os.Args[0]),strings.Repeat(\"=\", 10))",
 		  "}"
 		]
 	  }
