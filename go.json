@@ -1,0 +1,26 @@
+	"Default": {
+		"prefix": "main",
+		"body": [
+		  "package main",
+		  "import (",
+		  		"        \"sync\"",
+				"        \"os\"",
+				"        \"fmt\"",
+				"        \"path\"",
+				"        \"strings\"",
+		  ")",
+		  "",
+		  "func main() {",
+		  "        fmt.Println(strings.Repeat(\"=\", 10),path.Base(os.Args[0]),strings.Repeat(\"=\", 10))",
+		  "        var wg sync.WaitGroup",
+		  "        wg.Add(1)",
+		  "        go func() {",
+		  "                defer wg.Done()",
+		  "                $0",
+		  "        }()",
+		  "        wg.Wait()",
+		  "        fmt.Println(strings.Repeat(\"=\", 10),path.Base(os.Args[0]),strings.Repeat(\"=\", 10))",
+		  "}"
+		]
+	  }
+}
