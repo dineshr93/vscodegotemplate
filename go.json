@@ -12,6 +12,10 @@
 	// 	],
 	// 	"description": "Log output to console"
 	// }
+	  "func": {
+    	    "prefix": "func",
+    	    "body": ["func () $0()  {", "}"]
+  	  },
 	  "struct": {
 	    "prefix": "struct",
 	    "body": ["type $0 struct{", "}"]
