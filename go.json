@@ -12,6 +12,28 @@
 	// 	],
 	// 	"description": "Log output to console"
 	// }
+	  "struct": {
+	    "prefix": "struct",
+	    "body": ["type $0 struct{", "}"]
+	  },
+	  "basic": {
+	    "prefix": "main",
+	    "body": [
+	      "package main",
+	      "import (",
+	      "        \"os\"",
+	      "        \"fmt\"",
+	      "        \"path\"",
+	      "        \"strings\"",
+	      ")",
+	      "",
+	      "func main() {",
+	      "        fmt.Println(strings.Repeat(\"=\", 10),\"start of\",path.Base(os.Args[0]),strings.Repeat(\"=\", 10))",
+	      "        $0",
+	      "        fmt.Println(strings.Repeat(\"=\", 10),\"End of\",path.Base(os.Args[0]),strings.Repeat(\"=\", 10))",
+	      "}"
+	    ]
+	  },
 	"Default": {
 		"prefix": "main",
 		"body": [
